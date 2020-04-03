@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import utility.RequestIdGenerator;
+import utility.IdGenerator;
 
 /**
  *
@@ -25,7 +25,7 @@ public class StudioRequestCrud {
     //String request_id,String o_name,String o_contact,String o_email,String s_name,String s_address,byte[] image
     public int requestToDatabase(StudioRequest studioRequest) throws ClassNotFoundException, SQLException{
         int i = 0;
-        RequestIdGenerator rig=new RequestIdGenerator();
+        IdGenerator rig=new IdGenerator();
         
     try{
         String request_id=rig.requestIdGenerator();

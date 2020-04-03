@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index-page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+		
+		<style>
+				*{margin:0px;font-family: "Allerta Stencil", Sans-serif;}
+				#input-box-container{margin-top:150px;}
+				#footer-container{margin-top:250px;height:20%;padding-top:30px;}
+				.w3-panel{padding-top:16px;padding-bottom:16px;}
+				.w3-allerta {font-family: "Allerta Stencil", Sans-serif;}
+		</style>
     </head>
     <body>
-        <a href="admin.jsp">Admin-Login</a>
-        <a href="_studiorequest.jsp">Request-To-Add-Yout-Studio</a>
-           
+	<div class="w3-container w3-center">
+		
+			<div class="w3-panel w3-yellow w3-round-xlarge " align="center" id="input-box-container">
+				<form action=# method="get">
+					<input type="text" name="_city" placeholder="select city" class="w3-round" />
+					<input type="text" name="_city" placeholder="select area" class="w3-round" />
+					<input type="text" name="_fitness_place" placeholder="select fitness option" class="w3-round"/>
+					<input type="submit" value="Search" />
+				</form>
+			</div>
+		
+			
+			<div class="w3-container w3-yellow w3-round-xlarge" id="footer-container">
+			<label class="w3-right w3-padding-large"><a href="admin.jsp">Admin-Login</a></label>
+			<label class="w3-right w3-padding-large"><a href="_studiorequest.jsp">Request-To-Add-Your-Studio</a></label>
+		</div>
+	</div>
     </body>
 </html>

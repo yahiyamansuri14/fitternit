@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dao.CrudOperation;
+import dao.AdminCrudOperation;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -34,7 +34,7 @@ public class adminlogin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String email=request.getParameter("email");
         String pwd=request.getParameter("pwd");
-        CrudOperation obj=new CrudOperation();
+        AdminCrudOperation obj=new AdminCrudOperation();
         int j=obj.adminLogin(email, pwd);
         if(j==1){
             HttpSession session=request.getSession();

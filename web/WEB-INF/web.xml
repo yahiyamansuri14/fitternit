@@ -8,11 +8,17 @@
         <servlet-name>studiorequest</servlet-name>
         <servlet-class>controller.studiorequest</servlet-class>
     </servlet>
-    
-    
     <servlet>
         <servlet-name>ShowRequestById</servlet-name>
         <servlet-class>controller.ShowRequestById</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddOwner</servlet-name>
+        <servlet-class>controller.AddOwner</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MultipartTest</servlet-name>
+        <servlet-class>controller.MultipartTest</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>adminlogin</servlet-name>
@@ -22,11 +28,17 @@
         <servlet-name>studiorequest</servlet-name>
         <url-pattern>/studiorequest</url-pattern>
     </servlet-mapping>
-    
-    
     <servlet-mapping>
         <servlet-name>ShowRequestById</servlet-name>
         <url-pattern>/ShowRequestById</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddOwner</servlet-name>
+        <url-pattern>/AddOwner</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MultipartTest</servlet-name>
+        <url-pattern>/MultipartTest</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -15,7 +15,7 @@ import java.sql.Statement;
  *
  * @author yahiya
  */
-public class RequestIdGenerator {
+public class IdGenerator {
     public String requestIdGenerator() throws ClassNotFoundException, SQLException{
         String prefix="req";
     Connection con=MyConnection.mycon();
@@ -37,4 +37,25 @@ public class RequestIdGenerator {
         System.out.println("Id is:-"+copyGeneratedId);
     return null;
 }
+    //owner id generator
+    public String ownerIdGenerator()throws ClassNotFoundException,SQLException{
+        String prefix="own";
+        Connection con=MyConnection.mycon();
+        String copyGeneratedId=null;
+        String query="select COUNT(owner_id) as ID from ownerdetails";
+        try{
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery(query);
+            if(rs.next()){
+                int id=rs.getInt(1)+101;
+                String generatedId=prefix+new Integer(id).toString();
+                copyGeneratedId=generatedId;
+                return generatedId;
+        }else{
+            String generatedId=prefix+101;
+            return generatedId;
+        }
+        }catch(Exception e){e.printStackTrace();}
+        return null;
+    }
 }

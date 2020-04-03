@@ -31,18 +31,15 @@
                 session=request.getSession(false);
                 if(session!=null){
                 ArrayList<StudioRequest> studioRequest=(ArrayList<StudioRequest>)session.getAttribute("studioRequest");
-                ArrayList<String> ids=new ArrayList<String>();
-                for(int i=0;i<studioRequest.size();i++){
-                    ids.add(studioRequest.get(i).getRequest_id());
-                }
-               for(String sr:ids){
+               
+               for(StudioRequest sr:studioRequest){
                    
                 
             %>
             
             <!-- Arranging Data in tabular format-->
             <tr>
-                <th><%=sr%></th>
+                <th><%=sr.getRequest_id()%></th>
                 <th>view</th>
                 <th>delete</th>
                 <th>confirm</th>

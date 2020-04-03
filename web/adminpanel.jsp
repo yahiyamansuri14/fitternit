@@ -13,10 +13,11 @@
     </head>
     <body>
         <h1>Admin-Panel</h1>
-        <a href="addstudio.jsp">Add-Fitness-Place</a>
+        <a href="_addstudio.jsp">Add-Fitness-Place</a>
         <a href="">Show-All-Fitness-Places</a>
         <a href="">Show-Fitness-Place-By-Id</a>
         <a href="_allrequestpage.jsp">Show-All-Request</a>
         <a href="StudioRequestById">Test-Studio-Request-By-Id</a>
+        <a href="_ownerdetails.jsp">Add-Owner</a>
     </body>
 </html>
